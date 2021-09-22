@@ -158,7 +158,9 @@ function drawEverythingElse() {
   // meridian
   if (is12Hour) g.drawString((d.getHours() < 12) ? "AM" : "PM", x, Y + 4, true);
   // date
-  g.setFontAlign(0,-1);
+ g.reset();
+ g.setFont("Vector",28);
+ g.setFontAlign(0,-1);
   var date = locale.date(d,false);
   g.drawString(date, g.getWidth()/2, y+8, true);
 }
